@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::muhammad-resume-2026-fra",
+                "arn:aws:s3:::muhammad-resume-2026-fra/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudfront:CreateInvalidation",
+                "cloudfront:GetInvalidation"
+            ],
+            "Resource": "arn:aws:cloudfront::*:distribution/EQHI453NYWSSZ"
+        }
+    ]
+}

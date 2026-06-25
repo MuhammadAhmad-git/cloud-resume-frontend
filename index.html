@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ahmad - Resume</title>
+    <style>
+        :root {
+            --text-main: #222222;
+            --text-muted: #666666;
+            --accent: #232f3e; /* AWS Squid Ink dark blue */
+            --spacing: 20px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            margin-bottom: var(--spacing);
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: var(--spacing);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 5px 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin: 0 0 15px 0;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: var(--text-muted);
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 5px;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: normal;
+        }
+
+        .institution {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 2px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .skill-category strong {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Muhammad Ahmad</h1>
+        <div class="subtitle">Aspiring Cloud Support Engineer · AWS Cloud Practitioner (in progress)</div>
+        <div class="contact-info">
+            <span>📍 Bamberg, Germany</span>
+            <span>✉️ <a href="mailto:muhammad@example.com">muhammad@example.com</a></span>
+            <span>🔗 <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a></span>
+            <span>💻 <a href="https://github.com/yourname" target="_blank">github.com/yourname</a></span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Profile</h2>
+        <p>M.Sc. graduate in Software Systems Science (University of Bamberg) pivoting into cloud engineering. Actively building hands-on AWS skills and pursuing AWS Cloud Practitioner certification. Targeting English-first tech environments in Germany.</p>
+    </section>
+
+    <section>
+        <h2>Certifications & Learning</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>AWS Certified Cloud Practitioner (CLF-C02)</span>
+                <span class="date">In Progress</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>Static Website on AWS S3 + CloudFront</span>
+                <span class="date">2026</span>
+            </div>
+            <p>Deployed a personal portfolio site using S3 static hosting, CloudFront CDN, and Route 53 DNS. Configured IAM policies and bucket policies for least-privilege access.</p>
+        </div>
+        <div class="item">
+            <div class="item-header">
+                <span>Serverless Lambda + S3 Trigger</span>
+                <span class="date">2025</span>
+            </div>
+            <p>Built a Python Lambda function that processes uploaded files in S3, stores metadata in DynamoDB, and sends alerts via SNS.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>M.Sc. Software Systems Science</span>
+                <span class="date">2023–2025</span>
+            </div>
+            <div class="institution">University of Bamberg, Germany</div>
+        </div>
+    </section>
+
+<section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category"><strong>Cloud:</strong> AWS (EC2, S3, IAM, Lambda, VPC)</div>
+            <div class="skill-category"><strong>Languages:</strong> Python</div>
+            <div class="skill-category"><strong>OS & Tools:</strong> Linux CLI, Git, GitHub</div>
+            <div class="skill-category"><strong>IaC & Network:</strong> Terraform (basics), Networking Fundamentals</div>
+        </div>
+    </section>
+
+    <div style="text-align: center; margin-top: 30px; font-size: 1.2em; padding: 20px; border-top: 1px solid #eaeaea;">
+        Total Visitors: <span id="counter" style="font-weight: bold; color: #2ecc71;">Loading...</span>
+    </div>
+
+    <script>
+        const api_url = 'https://drnwdjxrxj.execute-api.eu-central-1.amazonaws.com/counter';
+        
+        async function getCounter() {
+            try {
+                let response = await fetch(api_url, { method: 'POST' });
+                if (!response.ok) throw new Error('Network response was not ok');
+                let data = await response.json();
+                document.getElementById('counter').innerText = data.count;
+            } catch (error) {
+                console.error("Error fetching visitor counter:", error);
+                document.getElementById('counter').innerText = "Error";
+            }
+        }
+        getCounter();
+    </script>
+</body>
+</html>
