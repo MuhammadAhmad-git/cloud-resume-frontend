@@ -107,51 +107,96 @@
         .skill-category strong {
             color: var(--accent);
         }
+        
+        ul {
+            margin: 5px 0 0 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 4px;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Muhammad Ahmad</h1>
-        <div class="subtitle">  Cloud Support Engineer · AWS Cloud Practitioner(Certified)  </div>
+        <div class="subtitle">Cloud Engineer</div>
         <div class="contact-info">
             <span>📍 Bamberg, Germany</span>
-            <span>✉️ <a href="mailto:muhammad@example.com">muhammad@example.com</a></span>
-            <span>🔗 <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a></span>
-            <span>💻 <a href="https://github.com/yourname" target="_blank">github.com/yourname</a></span>
+            <span>✉️ <a href="mailto:butter.ahmed3@gmail.com">butter.ahmed3@gmail.com</a></span>
+            <span>🔗 <a href="https://www.linkedin.com/in/muhammad-ahmad-372833194" target="_blank">linkedin.com/in/muhammad-ahmad-372833194</a></span>
+            <span>💻 <a href="https://github.com/MuhammadAhmad-git" target="_blank">github.com/MuhammadAhmad-git</a></span>
         </div>
     </header>
 
     <section>
         <h2>Profile</h2>
-        <p>M.Sc. graduate in Software Systems Science (University of Bamberg) pivoting into cloud engineering. Actively building hands-on AWS skills and pursuing AWS Cloud Practitioner certification. Targeting English-first tech environments in Germany.</p>
-    </section>
-
-    <section>
-        <h2>Certifications & Learning</h2>
-        <div class="item">
-            <div class="item-header">
-                <span>AWS Certified Cloud Practitioner (CLF-C02)</span>
-                <span class="date">In Progress</span>
-            </div>
-        </div>
+        <p>M.Sc. graduate in Software Systems Science (University of Bamberg) specialized in building and automating serverless cloud architectures. Hands-on expertise transforming traditional physical application environments into modular Infrastructure as Code frameworks with robust multi-repo deployment pipelines. Targeting engineering environments in Germany.</p>
     </section>
 
     <section>
         <h2>Projects</h2>
+        
         <div class="item">
             <div class="item-header">
-                <span>Static Website on AWS S3 + CloudFront</span>
+                <span>Cloud Resume Challenge — Frontend Architecture</span>
                 <span class="date">2026</span>
             </div>
-            <p>Deployed a personal portfolio site using S3 static hosting, CloudFront CDN, and Route 53 DNS. Configured IAM policies and bucket policies for least-privilege access.</p>
+            <ul>
+                <li>Deployed a responsive, personal portfolio resume website utilizing <strong>AWS S3</strong> static website hosting and configured tailored bucket policies for secure, public read access.</li>
+                <li>Integrated an <strong>AWS CloudFront</strong> distribution as a global Content Delivery Network (CDN) to enforce HTTPS encryption, optimize asset delivery caching, and minimize edge-location latency.</li>
+                <li>Configured custom domain routing and SSL/TLS certificate handshakes natively using <strong>Route 53</strong> and <strong>AWS Certificate Manager (ACM)</strong>.</li>
+            </ul>
         </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <span>Cloud Resume Challenge — Serverless Backend API</span>
+                <span class="date">2026</span>
+            </div>
+            <ul>
+                <li>Engineered a real-time visitor tracking counter microservice using a <strong>Python-based AWS Lambda</strong> function to orchestrate state mutations.</li>
+                <li>Developed an <strong>AWS HTTP API Gateway</strong> endpoint serving as a public REST interface, executing CORS-compliant handshakes with the frontend script.</li>
+                <li>Provisioned an <strong>AWS DynamoDB</strong> NoSQL table to store atomic counter keys, writing efficient update expressions to handle concurrent visitor increments.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span>Cloud Resume Challenge — Infrastructure as Code (IaC)</span>
+                <span class="date">2026</span>
+            </div>
+            <ul>
+                <li>Migrated the live serverless backend footprint out of the manual AWS Console and codified all components cleanly into <strong>Terraform</strong> configurations.</li>
+                <li>Formulated explicit state mapping strategies to execute seamless resource imports of running production assets without incurring system downtime.</li>
+                <li>Established an architectural remote state storage locking strategy utilizing a secure <strong>S3 tracking bucket</strong> to manage state isolation safely outside local disk environments.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span>Cloud Resume Challenge — Multi-Repository CI/CD Pipelines</span>
+                <span class="date">2026</span>
+            </div>
+            <ul>
+                <li>Constructed automated multi-tier deployment workflows using <strong>GitHub Actions</strong> to eliminate manual workspace synchronization tasks.</li>
+                <li>Eliminated the risk of exposed long-lived cloud keys by implementing passwordless <strong>OpenID Connect (OIDC)</strong> authentication tokens to assume dynamically scoped <strong>AWS IAM deployment roles</strong>.</li>
+                <li>Configured the frontend runner pipeline to automatically target production S3 assets and execute targeted <strong>CloudFront cache invalidations</strong> upon every main branch code push.</li>
+            </ul>
+        </div>
+
         <div class="item">
             <div class="item-header">
                 <span>Serverless Lambda + S3 Trigger</span>
                 <span class="date">2025</span>
             </div>
-            <p>Built a Python Lambda function that processes uploaded files in S3, stores metadata in DynamoDB, and sends alerts via SNS.</p>
+            <ul>
+                <li>Architected a Python-based Lambda function triggered by real-time <strong>S3</strong> bucket file uploads to parse incoming file payloads.</li>
+                <li>Automated metadata extraction and tracking profiles directly into <strong>DynamoDB</strong> tracking indexes.</li>
+                <li>Integrated <strong>Amazon SNS (Simple Notification Service)</strong> to broadcast instant text/email alert triggers upon data pipeline ingest completion.</li>
+            </ul>
         </div>
     </section>
 
@@ -166,13 +211,13 @@
         </div>
     </section>
 
-<section>
+    <section>
         <h2>Technical Skills</h2>
         <div class="skills-grid">
-            <div class="skill-category"><strong>Cloud:</strong> AWS (EC2, S3, IAM, Lambda, VPC)</div>
+            <div class="skill-category"><strong>Cloud:</strong> AWS (EC2, S3, IAM, Lambda, VPC, CloudFront)</div>
             <div class="skill-category"><strong>Languages:</strong> Python</div>
-            <div class="skill-category"><strong>OS & Tools:</strong> Linux CLI, Git, GitHub</div>
-            <div class="skill-category"><strong>IaC & Network:</strong> Terraform (basics), Networking Fundamentals</div>
+            <div class="skill-category"><strong>OS & Tools:</strong> Linux CLI, Git, GitHub Actions</div>
+            <div class="skill-category"><strong>IaC & Network:</strong> Terraform, Networking Fundamentals, OIDC</div>
         </div>
     </section>
 
