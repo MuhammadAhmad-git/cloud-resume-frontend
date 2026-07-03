@@ -122,7 +122,7 @@
 
     <header>
         <h1>Muhammad Ahmad</h1>
-        <div class="subtitle">Cloud Engineer</div>
+        <div class="subtitle">Cloud & DevOps Engineer</div>
         <div class="contact-info">
             <span>📍 Bamberg, Germany</span>
             <span>✉️ <a href="mailto:buttar.ahmed3@gmail.com">buttar.ahmed3@gmail.com</a></span>
@@ -133,7 +133,7 @@
 
     <section>
         <h2>Profile</h2>
-        <p>M.Sc. graduate in Software Systems Science (University of Bamberg) combining a strong foundation in Linux System Administration with modern, hands-on cloud automation expertise. Proven track record in configuring enterprise OS environments, developing automation scripts, and designing secure, serverless architectures on AWS. Proficient in Infrastructure as Code (Terraform) and robust CI/CD deployment pipelines.</p>
+        <p>M.Sc. graduate in Software Systems Science (University of Bamberg) with a background in Linux system administration and hands-on experience building and automating cloud infrastructure on AWS. Comfortable working across the stack from Linux servers and networking to Infrastructure as Code (Terraform) and CI/CD pipelines (GitHub Actions). Looking to bring that combination of operations discipline and automation skill to a Cloud/DevOps role.</p>
     </section>
     
     
@@ -144,11 +144,11 @@
                 <span>Linux System Administrator | House of Professionals</span>
             </div>
             <ul>
-                <li>Managed, configured, and maintained enterprise Linux server environments (Ubuntu/CentOS), ensuring 99.9% uptime for core operational services.</li>
-                <li>Provisioned user permissions, access control matrices, and secure SSH key keys using Linux identity and security best practices.</li>
-                <li>Engineered custom Bash shell scripts to automate repetitive system tasks, including log rotation schedules, cron jobs, and automated data backups.</li>
-                <li>Diagnosed complex network connectivity issues across system infrastructures, utilizing core networking tools (SSH, TCP/IP, DNS, netstat, systemd).</li>
-                <li>Monitored system health metrics (CPU load, memory allocation, disk I/O) using native Linux utilities to resolve performance bottlenecks proactively. </li>
+                <li>Administered and maintained Ubuntu/CentOS server environments, keeping core operational services at 99.9% uptime.</li>
+                <li>Wrote Bash automation scripts for recurring operational tasks, including log rotation, cron-scheduled jobs, and data backups.</li>
+                <li>Managed user access and permissions using Linux identity and SSH key-based security practices.</li>
+                <li>Monitored system health (CPU, memory, disk I/O) with native Linux tools and resolved performance issues proactively</li>
+                <li>Troubleshot network connectivity issues using SSH, TCP/IP, DNS, and systemd across the server fleet. </li>
             </ul>
         </div>
     
@@ -159,12 +159,12 @@
         
         <div class="item">
             <div class="item-header">
-                <span>Frontend Architecture</span>
+                <span>Static Site Hosting & CDN</span>
             </div>
             <ul>
-                <li>Deployed a responsive, personal portfolio resume website utilizing <strong>AWS S3</strong> static website hosting and configured tailored bucket policies for secure, public read access.</li>
-                <li>Integrated an <strong>AWS CloudFront</strong> distribution as a global Content Delivery Network (CDN) to enforce HTTPS encryption, optimize asset delivery caching, and minimize edge-location latency.</li>
-                <li>Configured custom domain routing and SSL/TLS certificate handshakes natively using <strong>Route 53</strong> and <strong>AWS Certificate Manager (ACM)</strong>.</li>
+                <li>Hosted a personal portfolio site on AWS S3 static website hosting with scoped bucket policies for public read access.</li>
+                <li>Put AWS CloudFront in front of the site as a CDN to enforce HTTPS, cache assets at edge locations, and cut latency.</li>
+                <li>Set up a custom domain with SSL/TLS via Route 53 and AWS Certificate Manager (ACM).</li>
             </ul>
         </div>
         
@@ -173,9 +173,9 @@
                 <span>Serverless Backend API</span>
             </div>
             <ul>
-                <li>Engineered a real-time visitor tracking counter microservice using a <strong>Python-based AWS Lambda</strong> function to orchestrate state mutations.</li>
-                <li>Developed an <strong>AWS HTTP API Gateway</strong> endpoint serving as a public REST interface, executing CORS-compliant handshakes with the frontend script.</li>
-                <li>Provisioned an <strong>AWS DynamoDB</strong> NoSQL table to store atomic counter keys, writing efficient update expressions to handle concurrent visitor increments.</li>
+                <li>Built a visitor-counter microservice with a Python AWS Lambda function</li>
+                <li>Exposed it through an AWS HTTP API Gateway endpoint with CORS configured for the frontend</li>
+                <li>Stored counts in DynamoDB, using atomic update expressions to handle concurrent writes safely.</li>
             </ul>
         </div>
 
@@ -185,19 +185,18 @@
             </div>
             <ul>
                 <li>Migrated the live serverless backend footprint out of the manual AWS Console and codified all components cleanly into <strong>Terraform</strong> configurations.</li>
-                <li>Formulated explicit state mapping strategies to execute seamless resource imports of running production assets without incurring system downtime.</li>
-                <li>Established an architectural remote state storage locking strategy utilizing a secure <strong>S3 tracking bucket</strong> to manage state isolation safely outside local disk environments.</li>
+                <li>Configured remote state storage and locking on S3 to keep Terraform state safe and shareable outside local disk.</li>
             </ul>
         </div>
 
         <div class="item">
             <div class="item-header">
-                <span>Multi-Repository CI/CD Pipelines</span>
+                <span>CI/CD Pipelines</span>
             </div>
             <ul>
-                <li>Constructed automated multi-tier deployment workflows using <strong>GitHub Actions</strong> to eliminate manual workspace synchronization tasks.</li>
-                <li>Eliminated the risk of exposed long-lived cloud keys by implementing passwordless <strong>OpenID Connect (OIDC)</strong> authentication tokens to assume dynamically scoped <strong>AWS IAM deployment roles</strong>.</li>
-                <li>Configured the frontend runner pipeline to automatically target production S3 assets and execute targeted <strong>CloudFront cache invalidations</strong> upon every main branch code push.</li>
+                <li>Built GitHub Actions workflows to automate frontend and backend deployments, removing manual release steps.</li>
+                <li>Replaced long-lived AWS access keys with OpenID Connect (OIDC), so pipelines assume short-lived, scoped IAM roles.</li>
+                <li>Configured the frontend pipeline to sync builds to S3 and invalidate the CloudFront cache automatically on every push to main.</li>
             </ul>
         </div>
     </section>
@@ -216,10 +215,10 @@
     <section>
         <h2>Technical Skills</h2>
         <div class="skills-grid">
-            <div class="skill-category"><strong>Cloud:</strong> AWS (EC2, S3, IAM, Lambda, VPC, CloudFront)</div>
-            <div class="skill-category"><strong>Languages:</strong> Python, Javascript</div>
-            <div class="skill-category"><strong>OS & Tools:</strong> Linux CLI, Git, GitHub Actions</div>
-            <div class="skill-category"><strong>IaC & Network:</strong> Terraform, Networking Fundamentals, OIDC</div>
+            <div class="skill-category"><strong>Cloud:</strong> AWS (EC2, S3, IAM, Lambda, VPC, CloudFront, Route53, ACM, DynamoDB, API Gateway)</div>
+            <div class="skill-category"><strong>Languages:</strong> Python, Javascript, Bash</div>
+            <div class="skill-category"><strong>OS & Networking:</strong> Linux CLI, TCP/IP, DNS, SSH</div>
+            <div class="skill-category"><strong>IaC & CI/CD:</strong> Terraform, Github Actions, OIDC</div>
         </div>
     </section>
 
